@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /opt/planetxrobots/ros/RoverLaunch/build/devel/setup.sh

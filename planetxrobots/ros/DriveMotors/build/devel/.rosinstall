@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /opt/planetxrobots/ros/DriveMotors/build/devel/setup.sh

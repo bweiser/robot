@@ -1,0 +1,124 @@
+<launch>
+ <param
+        name="RfidReader/serial/port"
+        type="string"
+        value="/dev/ttyUSB0"
+     />
+    <param
+        name="RfidReader/serial/speed"
+        type="int"
+        value="9600"
+     />
+    <param
+        name="RfidReader/serial/timeout"
+        type="int"
+        value="1"
+     />
+    <param
+        name="RfidReader/tags/topGoal/RFID"
+        type="string"
+        value="77 0 106 151 26"
+     />
+    <param
+        name="RfidReader/tags/topGoal/name"
+        type="string"
+        value="Gypsum"
+     />
+    <param
+        name="RfidReader/tags/topGoal/proximityList"
+        type="string"
+        value="77 0 106 198 242,77 0 106 188 208,77 0 106 141 207,77 0 106 211 253"
+     />
+    <param
+        name="RfidReader/tags/topGoal/proximityName"
+        type="string"
+        value="Gypsum Proximity"
+     />
+    <param
+        name="RfidReader/tags/middleGoal/RFID"
+        type="string"
+        value="77 0 106 208 10"
+  />
+    <param
+        name="RfidReader/tags/topGoal/proximityName"
+        type="string"
+        value="Gypsum Proximity"
+     />
+    <param
+        name="RfidReader/tags/middleGoal/RFID"
+        type="string"
+        value="77 0 106 208 10"
+     />
+    <param
+        name="RfidReader/tags/middleGoal/name"
+        type="string"
+        value="Mud"
+     />
+    <param
+        name="RfidReader/tags/middleGoal/proximityList"
+        type="string"
+        value="77 0 106 206 36,77 0 106 160 153,77 0 106 167 36,75 0 130 194 124"
+     />
+    <param
+        name="RfidReader/tags/middleGoal/proximityName"
+        type="string"
+        value="Mud Proximity"
+     />
+    <param
+        name="RfidReader/tags/bottomGoal/RFID"
+        type="string"
+        value="77 0 106 135 157"
+     />
+    <param
+        name="RfidReader/tags/bottomGoal/name"
+        type="string"
+        value="Fossil"
+     />
+    <param
+        name="RfidReader/tags/bottomGoal/proximityList"
+        type="string"
+        value="77 0 106 151 224,77 0 106 113 117,75 0 130 174 47,75 0 131 5 45"
+     />
+    <param
+        name="RfidReader/tags/bottomGoal/proximityName"
+        type="string"
+        value="Fossil Proximity"
+     />
+    <param
+        name="RfidReader/tags/unknownRFID"
+        type="string"
+        value="Unknown"
+     />
+    <param
+        name="RoverState/battery/channel"
+        type="int"
+        value="0"
+     />
+    <param
+        name="RoverState/battery/fullCharge"
+        type="int"
+        value="670"
+     />
+    <param
+        name="RoverState/battery/depletedCharge"
+        type="int"
+        value="200"
+     />
+    <node
+        pkg="RoverState"
+        name="RoverState"
+        type="RoverState.py"
+        args=""
+        output="log"
+        respawn="true"
+     />
+
+    <node
+        pkg="DriveMotors"
+        name="DriveMotors"
+        type="DriveMotors.py"
+        args=""
+        output="log"
+        respawn="true"
+     />
+</launch>
